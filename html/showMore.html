@@ -1,0 +1,49 @@
+
+<md-dialog  ng-cloak="" ng-class="" class="c_dialogBox">
+  <!-- <form> -->
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 ng-model="dialogHeader">{{dialogHeader}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+
+
+
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2></h2>
+        <div>
+           <div ng-model="dialogImage" class = "imageContainer">
+              <img src="{{dialogImage}}" alt="No Image Available">
+           </div> 
+           <div class = "dialogInfo">
+           <p ng-model="description">
+            {{description}}
+           </p>
+             <li><span class="descSec">Cover  </span><span> {{binding}}</span></li>
+             <li><span class="descSec">Language  </span><span> {{language}}</span></li>
+             <li><span class="descSec">Price  </span><span>Rs {{price}}</span></li>
+           </div>
+           
+
+
+        </div>
+
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions class ="dialog_footer_custom" layout="row">
+      
+      <md-button class ="md-raised md-primary bu-custom" data-id="{{prodId}}"ng-click="answer('useful')">
+        Buy
+      </md-button>
+
+
+    </md-dialog-actions>
+  <!-- </form> -->
+</md-dialog>

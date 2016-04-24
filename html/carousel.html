@@ -1,0 +1,33 @@
+<!-- <div id = "book_carousel">
+           
+               <div ng-repeat="data in carouselData">
+                   <img ng-src="{{data.coverpic}}" alt="">
+               </div>
+               
+          </div>  -->
+
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Latest Arrival</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <uib-carousel active="active" no-wrap="noWrapSlides" interval="3000">
+      <uib-slide ng-repeat="data in carouselData" index="slide.id">
+        <div class="carousel-imageHolder">
+           <img ng-src="{{data.coverpic}}" style="margin:auto;">
+        </div>
+         <div class="book-title">
+          <h4>{{data.name}}</h4>
+          <div class = "latest_price"> Rs {{data.price}}</div>
+        </div>
+      </uib-slide>
+    </uib-carousel>
+    <md-toolbar class="toolbar-footer">
+      <div class="md-toolbar-tools">
+        
+      </div>
+    </md-toolbar>

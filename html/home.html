@@ -1,0 +1,57 @@
+<div class="home_wrapper" ng-controller="WelcomeController">
+        <header id="header" class="">
+         <div class ="subHeader">  
+           <nav class = "logoNav">
+           	<div title="The Bookshop" class="logNav_top">The</div>
+           	<div title="The Bookshop" class="logNav_bottom">Bookshop</div>
+           </nav>
+           <nav class="descSec navwelcomeLog">
+             <span ng-model = "userWelcome" class = "userShow"> Welcome {{userWelcome}} !!</span>
+             <span ng-click="signIn($event)" id = "signIn" ng-show="activateSignInButton">Sign In</span>
+             <span ng-click="logOut($event)" id="logOut" ng-show="activateLoginButton">Log out</span> 
+           </nav>
+         </div>
+
+         <md-toolbar class="md-hue-2 mainToolbar" id="mainToolbar">
+      <div class="md-toolbar-tools">
+        <!-- <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button> -->
+        <h2 class="tabNav">
+          <span ui-sref="home.books">Books</span>
+              <span ui-sref="home.basket">My Basket <label class ="basketCount">{{totalCount}}</label></span>
+              <span ui-sref="home.profile">Profile</span>
+              <!-- <span ui-sref="home.sell">Sell</span> -->
+        </h2>
+        <span flex=""></span>
+        <!-- <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button> -->
+      </div>
+    </md-toolbar>
+   
+        </header><!-- /header -->
+        <div class ="contentWrapper">
+        <!--carousel strats here-->
+            <div id = "book_carousel" ng-include ="'carousel.html'" class="owl-carousel" ng-show="showCarousel()">
+            </div>   
+       <!--carousel end here-->
+        <div>
+             <div ui-view class="uiViewHolder"></div> 
+        </div>
+        </div>
+    
+
+
+
+    
+</div>
+  
+
+
+
+
+

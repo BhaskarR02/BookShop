@@ -1,0 +1,61 @@
+<div id ="paymentView" ng-controller="PaymentController">
+   <div class ="paymentAside">
+
+   <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>CHOOSE A PAYMENT METHOD</span>
+        </h2>
+        <span flex=""></span>
+      </div>
+    </md-toolbar>
+
+
+   	   <aside class = "paymentSelection">
+   	     <li ui-sref = "home.payment.rewards"><span class="payType">Reward Point</span></li>
+   	     <li ui-sref = "home.payment.cod"><span class="payType">Cash On Delivery</span></li>
+   	     <li ui-sref = "home.payment.credit"><span class="payType">Credit Card</span></li>
+   	     <li ui-sref = "home.payment.debit"><span class="payType">Debit Card</span></li>
+   	     <!-- <li ui-sref = "home.payment.netbanking">Net Banking</li> -->
+   	     <li ui-sref = "home.payment.giftvoucher"><span class="payType">E-Gift Voucher</span></li>
+   	   </aside>
+   	   <div class="paymentOptions" ui-view>
+   	     
+   	   </div>
+   	   <md-button class="md-raised md-primary bu-custom" data-id ="" ng-click="success($event)">PAY</md-button>
+   </div>
+   <div class = "paymentSuymmary">
+   	     <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>ORDER SUMMARY</span><span> {{orderQuantity}}</span>
+        </h2>
+        <span flex=""></span>
+      </div>
+    </md-toolbar>
+
+    <div style="padding:20px;">
+       <li><span>Net Price</span><spanng>{{netPrice}}</span>
+       <li><span>Payable amount</span><span>{{payamount}}</span>
+       <p>
+         Note: This is not an invoice.Invoice will be supplied along with delivery of goods.
+       </p>
+    </div>
+     <div style ="padding:12px 20px">
+        <header id="header" class="">
+          Deliver to
+        </header><!-- /header -->
+        <div>
+           <li><input type="text" name="" ng-model="firstName" placeholder="Name" ng-disabled="isEnable ==false"></li>
+           <li><input type="text" name="" ng-model="address_1" placeholder="Address Line 1" ng-disabled="isEnable ==false"></li>
+           <li><input type="text" name="" ng-model="address_2" placeholder="Address Line 2" ng-disabled="isEnable ==false"></li>
+        </div>
+        <div id ="bilAddress">
+           <md-button class="md-raised md-primary bu-custom" data-id ="" ng-click="editAdd($event)">{{buttonText}}</md-button>
+         </div> 
+     </div>
+ </div>
+
+   
+	
+</div>

@@ -1,0 +1,72 @@
+<div ng-controller="ProfileController" id = "profileView">
+ <div ng-if="showProfile ==true">
+     <div class = "placardHand"></div>
+     <div class="profileView">
+         <div class="addressContent">
+           <div class="profFields">
+           <div id="addSpace">
+         <li><span>Name</span><span class="_add"><input type = "text" ng-model="profile_name" value="{{profile_name}}" disabled></span></li>
+         <li><span>Address Line 1</span><span class="_add"><input type="text" ng-model="profile_addr_1" disabled></span></li>
+         <li><span>Address Line 2</span><span class="_add"><input type="text" ng-model="profile_addr_2" disabled></span></li>
+         <li><span>City</span><span class="_add"><input type="text" ng-model="profile_city" disabled></span></li>
+         <li><span>Zip Code</span><span class="_add"><input type="text" ng-model="profile_zipCode" disabled></span></li>
+         <li><span>State</span><span class="_add"><input type="text" ng-model="profile_state" disabled></span></li>
+         <li><span>Country</span><span class="_add"><input type="text" ng-model="profile_country" disabled></span></li>
+         </div>
+         <div id = "mapSpace">
+          Maps
+         </div>
+         </div>
+         <li ng-show="showSaveButton == false">
+            <md-button class="md-raised md-primary white-border" id = "editProfile" ng-click="editProfile($event)">Edit</md-button>
+            <md-button class="md-raised md-primary white-border" id = "editProfile" ng-click="toggleRight()">Sell Your Item</md-button>
+         </li>
+         <li ng-show="showSaveButton ==true">
+            <md-button class="md-raised md-primary white-border" id = "saveProfile" ng-click="saveEdit($event)">Save</md-button>
+            <md-button class="md-raised md-primary white-border" id = "cancelEdit" ng-click="cancelEdit($event)">Cancel</md-button>
+         </li>
+       </div>
+       <!-- <aside id = "profAside">
+           hello
+       </aside> -->
+
+
+       <md-sidenav class="md-sidenav-right md-whiteframe-4dp sellBook" md-component-id="right">
+
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Sell Your Book</h1>
+      </md-toolbar>
+      <md-content  layout-padding="" class="sellContainer">
+        <div class = "sellItems">
+        <div class="padded sellContent" md-whiteframe="24" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout="" layout-align="center center" ng-repeat="book in userBook">
+                 <div class = "imgContainer">
+                    <img src="{{book.coverpic}}">
+                  </div>
+                  <div class = "itemDesc">
+                     <div class="textDesc">{{book.name}}</div>
+                     <div><md-button class="md-raised md-primary">
+          SELL 
+        </md-button></div>
+                  </div>
+                 
+        </div>
+       </div>
+
+
+        <md-button ng-click="close()" class="md-primary bu-custom-close">
+          Close 
+        </md-button>
+      </md-content>
+
+    </md-sidenav>
+
+
+     </div>
+
+  </div>
+  <div ng-if="showProfile ==false">
+      <div ng-include="'../html/askToLogin.html'">
+      	
+      </div>
+  </div>
+</div>

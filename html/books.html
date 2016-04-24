@@ -1,0 +1,18 @@
+<div>
+   <div class="container">
+    <div class="row">
+           <div class="bookCard" md-whiteframe="24" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout="" layout-align="center center" ng-repeat="data in dataset">
+                   <div class="cardContent" style="background: url('{{data.coverpic}}') no-repeat center center;">
+                    <div class="bookPrice bookName"></div>
+                    <div class="buttonContent">
+                    <md-button class="md-raised md-primary m-custom" data-id="{{data.id}}" title = "Show More" ng-click="showMore(event)">M</md-button>
+                    <md-button class="md-raised md-primary bu-custom" data-id="{{data.id}}" ng-click="buy($event)">Buy</md-button>
+                    </div>
+                   </div>
+          </div>
+        </div>
+      <hr>
+    </div>
+</div>
+    
+ 

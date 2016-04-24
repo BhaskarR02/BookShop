@@ -1,0 +1,49 @@
+<md-dialog aria-label=""  ng-cloak>
+    <md-toolbar class="customToolbar">
+        <div class="md-toolbar-tools">
+            <h2>Register</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <form name = "registerForm" class ="formDesign">
+            <div>
+                <md-input-container class="md-block">
+                    <label> User Name</label>
+                    <input required="" name="userName" ng-model="register.userName"></input>
+                    <div ng-messages = "">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+            </div>
+            <md-input-container class="md-block">
+                <label>Password</label>
+                <input required="" type="password" name="password" ng-model="" minlength="3" maxlength="7">
+                    <div ng-messages="" role="">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength',]">
+                                Your password must be between 3 and 7 characters long.
+                            </div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label> Confirm Password</label>
+                    <input required="" type="password" name="password" ng-model="" minlength="3" maxlength="7">
+                        <div ng-messages="" role="">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength',]">
+                                    Password does not match
+                                </div>
+                        </div>
+                    </md-input-container>
+                </form>
+            </md-dialog-content>
+        </form>
+        <md-dialog-actions layout="row">
+            <md-button class ="md-primary md-raised" flex="90" flex-gt-md="auto" md-autofocus ng-click="registerUser(event)">
+         Register
+      </md-button>
+            <span flex></span>
+        </md-dialog-actions>
+    </md-dialog>

@@ -1,0 +1,23 @@
+<md-dialog aria-label=""  ng-cloak class = "dialogConfirm" ng-controller="DialogController">
+    <md-toolbar class="customToolbar">
+        <div class="md-toolbar-tools">
+            <h2>Do you want to delete this item from basket?</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+         <div class = "confirmContent">
+       There is only one {{bookName}} left in your container.Do you want to completly remove this item?
+          </div>
+
+        <md-dialog-actions layout = "row">
+               <md-button class ="md-raised md-primary bu-custom" flex="90" flex-gt-md="auto" md-autofocus ng-click="delItem()">Please do it !</md-button>
+            <span flex></span>
+            <md-button class ="md-raised bu_delete" flex="90" flex-gt-md="auto" md-autofocus ng-click="closeDialog()">No</md-button>
+            <span flex></span>
+         </md-dialog-actions>
+  </md-dialog-content>
+</md-dialog>

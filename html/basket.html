@@ -1,0 +1,50 @@
+<div ng-controller="BasketController" id = "basketView">
+  <div ng-if = "showBasket ==true">
+      <table id = "shoppedItem">
+         <thead>
+         	<tr><td>Name</td><td>Price</td><td>Quantity</td><!-- <td>Subtotal</td> -->
+           <td>Add</td><td>Delete</td>
+
+         	</tr>
+         </thead>
+         <tbody>
+         	<tr ng-repeat="data in dataset">
+               <td colspan="" rowspan="" headers="" ng-model="data.bookName">{{data.bookName}}</td>
+               <td colspan="" rowspan="" headers="" ng-model="data.bookPrice">{{data.bookPrice}}</td>
+               <td colspan="" rowspan="" headers="" class="bQuantity" ng-model="data.bookQuantity">{{data.bookQuantity}}</td>
+               <!-- <td colspan="" rowspan="" headers="">Will be update</td> -->
+               <td><md-button class="md-raised md-primary bu-custom" data-id ="{{data.bookId}}" ng-click="addBook($event)">Add</md-button></td>
+               <td><md-button class="md-raised bu_delete" data-id = "{{data.bookId}}" ng-click="checkDelCount($event,data.bookQuantity)">Delete</md-button></td>
+         	</tr>
+         </tbody>
+        <tfoot>
+        	<tr>
+        		<td colspan="3" rowspan="" headers="">Total</td>
+        		<td colspan="2" rowspan="" headers="" id = "totAmount" ng-model="totalAmount">{{totalAmount}}</td>
+        	</tr>
+        </tfoot>
+
+      </table>
+         <div id = "paymentButtonContainer">
+           <md-button class="md-raised md-primary white-border" id = "paymentButton">Proceed to Payment</md-button>
+         </div>
+
+
+
+
+      <!-- <div ng-repeat="data in dataset" class = "">
+         <span>{{}}</span>
+
+
+
+
+      </div> -->
+
+
+
+  </div>
+ <div ng-if="showBasket ==false">
+ 	<div ng-include="'../html/askToLogin.html'">
+ </div>
+
+</div>
