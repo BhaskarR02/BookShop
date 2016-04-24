@@ -1,0 +1,229 @@
+@import "common.less";
+
+html, body { height: 100%; width: 100%; margin: 0; }
+.home_wrapper{
+    background: url("../images/abs_5.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 0px 0px;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+
+}
+.mainToolbar{
+background-color: darkolivegreen !important;
+    border: 2px #fff;
+    border-style: groove;
+    border-left: 0px;
+    border-right: 0px;
+
+}
+.subHeader{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#243a19+0,556b2f+100&0.91+96,0.98+100 */
+    /*background: url("../images/abs_5.jpg") no-repeat center center;
+    background-size: cover;
+*/
+}
+.subHeader,.contentWrapper,.mainToolbar{
+ padding:0 100px;
+
+}
+.logoNav{
+
+    width:@autoWidth;
+    display:@inlineBlock;
+    color: #C4FF00;
+    text-align:@centerAlign;
+    padding: 0 15px;
+    .logNav_top{
+    	font-size: 20px;
+    	font-family: "SCRIPTBL"
+    }
+    .logNav_bottom{
+    	font-size: 40px;
+    	font-family: "ARIR";
+    }
+
+}
+.tabNav{
+        padding:10px;
+	span{
+		padding: 0 10px;
+		cursor:@pointer;
+        border-right: 1px solid;
+	}
+    span:last-child {
+    border-right: 0px
+   }
+}
+.cardholder{
+    height: 350px;
+    border-radius: @borderRadius_7;
+    padding: 0 40px;
+    margin:10px 0;
+    img{
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+.bookImage{
+    height: 200px;
+    text-align: center;
+}
+.cardContent{
+    border-radius: 10px;
+    height: 350px;
+    
+}
+.bookName{
+word-break:@breakAll;
+text-align:left;
+font-size: @14px;
+}
+.buttonContent{
+    text-align:@centerAlign;
+    margin-top: 265px;
+        display: inline-block;
+    width: 100%;
+}
+
+.bu-custom{
+    border: @whiteBorder;
+    background-color: @green !important;
+}
+.m-custom{
+    min-width: 40px !important;
+    min-height: 40px !important;
+    border-radius: 80px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: @whiteBorder;
+    
+}
+.navwelcomeLog{
+       max-width: 250px;
+    float: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#book_carousel{
+ width: 100%;
+ height: 240px;
+ background-color: #fff;
+ display: inline-block;
+ border-radius: @10_10;
+ border:1px solid red;
+ margin: 7px 0;
+background: #fff;
+color: #000; 
+
+
+
+  img{
+      max-height: 150px;
+      min-height: 150px;
+      float: left;
+      margin-left:150px !important;
+  }
+  md-toolbar{
+    border-top-left-radius:@10_10;
+    border-top-right-radius:@10_10;
+    min-height: 40px !important;
+    background: rebeccapurple;
+
+
+
+
+ 
+   
+  }
+
+.toolbar-footer{
+border-top-left-radius:0px;
+    border-top-right-radius:0px;
+
+border-bottom-left-radius:@10_10;
+border-bottom-right-radius:@10_10;
+background: rebeccapurple;
+}
+
+
+
+
+
+
+  .md-toolbar-tools{
+    max-height: 44px !important;
+    h2{
+        color:@white;
+    }
+   }
+   .carousel-indicators{
+    bottom:-40px !important;
+    li{
+        border: 1px solid @black;
+    }
+    
+   }
+   .carousel-indicators .active {
+    width: 30px !important;
+    background-color: #ECEC20 !important;
+}
+
+}
+.book-title{
+        width: 50%;
+    display: inline-block;
+    text-transform: @capitalize;
+}
+.latest_price{
+width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: aliceblue;
+    border: 1px dotted #fff;
+    background: green;
+    padding-top: 21px;
+    display: inline-block;
+}
+.bookCard{
+    margin-bottom: 15px;
+    padding: 10px;
+    background: url("../images/abs_1.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid sienna;
+    display: inline-block;
+    width: calc(100%/3);
+    max-width: calc(96%/3) !important;
+    margin-right: 14px;
+}
+  
+
+
+.demBook{
+    width: calc(100%/3);
+}
+#header{
+       /* position: fixed;
+    width: 100%;
+    z-index: 1001;*/
+}
+.descSec {
+    color: rgb(6, 6, 6);
+    font-size: 15px;
+    font-weight: normal;
+    outline-color: black;
+    border: 1px solid;
+    background: cornsilk;
+    border-radius: 10px;
+    padding: 5px;
+    }
+
+    .fixHeader{
+        position: fixed;
+        top: 0px;
+        z-index: 1001;
+    }

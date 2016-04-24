@@ -1,0 +1,161 @@
+@absolute:absolute;
+@margin:5px;
+@padding20:20px;
+@100vh:100vh;
+@inlineBlock:inline-block;
+@autoWidth:auto;
+@centerAlign:center;
+@justifyAlign:justify;
+@rightAlign:right;
+@pointer:pointer;
+@borderRadius_7:7px;
+@10_10:10px;
+@breakAll:break-all;
+@14px:14px;
+@capitalize:capitalize;
+
+
+/*Margin*/
+@marginTop10:10px;
+
+
+
+
+/*Color*/
+    @gray: gray;
+    @black:black;
+    @white:white;
+    @green:green;
+    @brown:brown;
+    @indigo:indigo;
+    @12px: 12px;
+
+/*Color end here*/
+
+
+/*Button Design*/
+
+   
+   @whiteBorder:1px solid #fff;
+
+
+/*Button Design End Here*/
+
+
+/*Border Design*/
+
+.white-border{
+   
+	border:@whiteBorder !important;
+}
+/* Border End here*/
+
+
+/*Box border*/
+
+@boxShadow{
+ -webkit-box-shadow: 4px 6px 11px 2px rgba(0,0,0,0.34);
+-moz-box-shadow: 4px 6px 11px 2px rgba(0,0,0,0.34);
+box-shadow: 4px 6px 11px 2px rgba(0,0,0,0.34);
+
+
+}
+
+@font-face{
+	font-family: 'SCRIPTBL';
+	src:url('../font/SCRIPTBL.eot');
+	src:local('SCRIPTBL'),url('../font/SCRIPTBL.woff') format('woff'),url('../font/SCRIPTBL.ttf') format('truetype');
+
+}
+
+@font-face {
+	font-family: 'adelleregularwebfont';
+	src: url('../font/adelleregularwebfont.eot');
+	src: local('adelleregularwebfont'), url('../font/adelleregularwebfont.woff') format('woff'), url('../font/adelleregularwebfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ARIR';
+	src: url('../font/ARIR.eot');
+	src: local('ARIR'), url('../font/ARIR.woff') format('woff'), url('../font/ARIR.ttf') format('truetype');
+}
+
+body{
+	font-size: 16px;
+	font-family: "adelleregularwebfont";
+	color:ivory;
+}
+ul{
+	margin: 0;
+	padding: 0;
+
+}
+li{
+	list-style: none;
+}
+header{
+	border-bottom: 2px solid tomato;
+    padding-bottom: 7px;
+}
+table{
+	width: 100%;
+	text-align: @centerAlign;
+	border-collapse: collapse;
+	color:@black;
+}
+tbody tr:nth-child(even) {background: hsla(50, 50%, 80%, 0.7);}
+tbody tr:nth-child(odd) {background: hsl(50, 50%, 80%);}
+tr, td { transition: .4s ease-in; } 
+thead ,tfoot {
+  background-color: hsla(12, 100%, 40%, 1);
+  line-height: 40px;
+}
+.bu_delete{
+ background-color: @black !important;
+ color:@white !important;
+ border: 1px solid @white;
+
+}
+
+input[type=text]{
+  border-radius:10px;
+  width:300px;
+}
+
+input[type=text]:disabled{
+  border-radius:0px;
+  background-color: transparent;
+  border: none;
+}
+input[type=text]:focus{
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(245,56,22,0.64);
+-moz-box-shadow: 0px 0px 15px 2px rgba(245,56,22,0.64);
+box-shadow: 0px 0px 15px 2px rgba(245,56,22,0.64)
+}
+
+
+/** {font-family: Helvetica Neue, Arial, sans-serif; }
+
+body { background-image: linear-gradient(#aaa 25%, #000);}
+
+h1, table { text-align: center; }
+
+table {border-collapse: collapse;  width: 70%; margin: 0 auto 5rem;}*/
+
+/*th, td { padding: 1.5rem; font-size: 1.3rem; }
+
+tr {background: hsl(50, 50%, 80%); }
+
+tr, td { transition: .4s ease-in; } 
+
+tr:first-child {background: hsla(12, 100%, 40%, 0.5); }
+
+tr:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
+
+td:empty {background: hsla(50, 25%, 60%, 0.7); }
+
+tr:hover:not(#firstrow), tr:hover td:empty {background: #ff0; pointer-events: visible;}
+tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}*/
+
+
+
